@@ -5,8 +5,8 @@ compatibility_date = "2024-01-01"
 # KV 命名空间绑定
 [[kv_namespaces]]
 binding = "CLASH_KV"
-id = "xxx"
-preview_id = "xxx"
+id = "1485e05ada1e4aa2ada70f1bc16ad042"
+preview_id = "2ab665887ce4488fa2e2c55c8f097782"
 
 # 环境变量（可选）
 [vars]
