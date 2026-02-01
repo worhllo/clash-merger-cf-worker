@@ -43,10 +43,10 @@ npm install
 
 ```bash
 # 创建生产环境 KV 命名空间
-wrangler kv:namespace create "CLASH_KV"
+wrangler kv namespace create "CLASH_KV"
 
 # 创建预览环境 KV 命名空间（用于开发测试）
-wrangler kv:namespace create "CLASH_KV" --preview
+wrangler kv namespace create "CLASH_KV" --preview
 ```
 
 执行后会得到两个 KV 命名空间 ID，类似：
@@ -73,8 +73,8 @@ preview_id = "你的预览环境KV命名空间ID"
 #### 4.1 设置 TOKEN
 
 ```bash
-# 生成一个随机 token（或使用你自己的）
-wrangler kv:key put --binding=CLASH_KV "TOKEN" "your-secret-token-here"
+# 自己设置一个随机 token（替换your-secret-token-here）
+wrangler kv key put --binding=CLASH_KV "TOKEN" "your-secret-token-here" --preview false --remote
 ```
 
 #### 4.2 设置订阅列表 (SUBS)
@@ -97,7 +97,7 @@ wrangler kv:key put --binding=CLASH_KV "TOKEN" "your-secret-token-here"
 然后将其上传到 KV：
 
 ```bash
-wrangler kv:key put --binding=CLASH_KV "SUBS" --path=subs.json
+wrangler kv key put --binding=CLASH_KV "SUBS" --path=subs.json --preview false --remote
 ```
 
 ### 5. 本地开发测试
